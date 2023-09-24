@@ -8,8 +8,9 @@ const PORT = process.env.PORT || 3000;
 
 function getRes(){
     let data = await scrapdata();
-
+    console.log(data);
 }
+getRes();
 
 
 app.get('/api',(req,res)=>{
