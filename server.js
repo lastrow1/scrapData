@@ -9,12 +9,12 @@ const PORT = process.env.PORT || 3000;
 
 
 
-app.get('/',(req,res)=>{
+app.get('/api',(req,res)=>{
     res.send('Hello from moon...')
 })
 
 
-app.get('/student/placed', async(req, res) => {
+app.get('/', async(req, res) => {
     try {
         let data = await scrapdata();
         console.log(data)
