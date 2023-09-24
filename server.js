@@ -5,6 +5,10 @@ const app = express();
 
 const PORT = process.env.PORT || 3000;
 
+
+
+
+
 app.get('/',(req,res)=>{
     res.send('Hello from moon...')
 })
@@ -13,6 +17,7 @@ app.get('/',(req,res)=>{
 app.get('/student/placed', async(req, res) => {
     try {
         let data = await scrapdata();
+        console.log(data)
         res.send(data)
     }
     catch(err){
