@@ -8,15 +8,14 @@ const selctor = '#COl_AY09 > div > div > div';
 console.log('all require files imported succesfully in fetch dat');
 
 async function scrapdata() {
-<<<<<<< HEAD
+
   try {
     const response = await axios.get(url);
     const data = response.data;
-=======
     let res = await fetch(url);
     let data = await res.text();
     console.log('fetch working...');
->>>>>>> 3b6d9379fb8c0d38d9e7d2e6a8baadb5db8af7d2
+
     return getHtml(data);
   } catch (error) {
     console.error('Error:', error);
