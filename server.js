@@ -5,6 +5,10 @@ const app = express();
 
 const PORT = process.env.PORT || 3000;
 
+app.get('/',(req,res)=>{
+    res.send('Hello from moon...')
+})
+
 
 app.get('/student/placed', async(req, res) => {
     try {
