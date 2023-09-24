@@ -3,6 +3,7 @@ const scrapdata = require('./fetchData.js')
 
 const app = express();
 
+const PORT = process.env.PORT||3000;
 
 
 app.get('/student/placed', async(req, res) => {
@@ -16,4 +17,6 @@ app.get('/student/placed', async(req, res) => {
 })
 
 
-app.listen('3000')
+app.listen(PORT,()=>{
+    console.log(`server running on PORT: ${PORT}`)
+})
