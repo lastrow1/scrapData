@@ -6,7 +6,7 @@ const app = express();
 const PORT = process.env.PORT || 3000;
 
 
-function getRes(){
+async function getRes(){
     let data = await scrapdata();
     console.log(data);
 }
