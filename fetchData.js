@@ -3,6 +3,7 @@ const url = 'https://siet.in/Placement/Placements';
 
 let objectData = [];
 const selctor = '#COl_AY09 > div > div > div';
+console.log('all require files imported succesfully in fetch dat');
 
 async function scrapdata() {
     let res = await fetch(url);

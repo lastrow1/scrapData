@@ -6,7 +6,10 @@ const app = express();
 const PORT = process.env.PORT || 3000;
 
 
+function getRes(){
+    let data = await scrapdata();
 
+}
 
 
 app.get('/api',(req,res)=>{
