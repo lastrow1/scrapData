@@ -7,12 +7,14 @@ const selctor = '#COl_AY09 > div > div > div';
 async function scrapdata() {
     let res = await fetch(url);
     let data = await res.text();
+    console.log('fetch working...');
     return getHtml(data);
 }
 
 
 function getHtml (html) {
    let $ = cheerio.load(html);
+   console.log('cheerio running...');
 
    $(selctor,html).each((index,element)=>{
       let card = $(element);
