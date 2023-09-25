@@ -18,8 +18,9 @@ async function scrapdata() {
 }
 
 function getHtml(html) {
+  let userId =0;
   let $ = cheerio.load(html);
-
+  
   $(selctor).each((index, element) => {
     let card = $(element);
 
@@ -32,6 +33,7 @@ function getHtml(html) {
    let pckgIndx = package.indexOf('Package')
 
     objectData.push({
+      id:userId++,
       studentName: title,
       profilePic: `https://siet.in${profileImg}`,
       companyName: company,
