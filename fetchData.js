@@ -28,11 +28,15 @@ function getHtml(html) {
     const profileImg = card.find('img').attr('src');
     const package = card.find('p').text();
 
+   let colonIndx = package.indexOf(':')+1;
+   let pckgIndx = package.indexOf('Package')
+
     objectData.push({
       studentName: title,
       profilePic: `https://siet.in${profileImg}`,
       companyName: company,
-      packageDetails: package,
+      jobProfile: package.slice(1,pckgIndx),
+      salaryPackage: package.slice(colonIndx,package.length-1).trim(),
     });
   });
 

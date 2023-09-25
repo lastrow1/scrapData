@@ -6,13 +6,6 @@ const app = express();
 const PORT = process.env.PORT || 3000;
 
 
-async function getRes(){
-    let data = await scrapdata();
-    console.log(data);
-}
-getRes();
-
-
 app.get('/api',(req,res)=>{
     res.send('Hello from moon...')
 })
