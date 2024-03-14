@@ -4,7 +4,7 @@ const cheerio = require('cheerio');
 const url = 'https://siet.in/Placement/Placements';
 
 let objectData = [];
-const selctor = '#COl_AY010 > div > div > div';
+const selctor = '#COl_AY09 > div > div > div';
 
 async function scrapdata() {
   try {
