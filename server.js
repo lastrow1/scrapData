@@ -15,7 +15,7 @@ app.get('/api',(req,res)=>{
 app.get('/', async(req, res) => {
     try {
         let data = await scrapdata();
-        console.log(data)
+        console.log(`Request Made ${Date.now()}`)
         res.send(data)
     }
     catch(err){
