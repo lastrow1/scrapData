@@ -3,7 +3,6 @@ const cheerio = require('cheerio');
 
 const url = 'https://siet.in/Placement/Placements';
 
-let objectData = [];
 const selctor = '#COl_AY09 > div > div > div';
 
 async function scrapdata() {
@@ -17,7 +16,9 @@ async function scrapdata() {
   }
 }
 
-function getHtml(html) {
+function getHtml(html) { 
+let objectData = [];
+
   let userId =0;
   let $ = cheerio.load(html);
   
